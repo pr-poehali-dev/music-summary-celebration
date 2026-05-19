@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1779184331555842584.html"
 	],
 	prefix: "",
 	theme: {
@@ -68,27 +69,37 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				oswald: ['Oswald', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif'],
+				caveat: ['Caveat', 'cursive'],
+			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'float-circle': {
+					'0%, 100%': { transform: 'translateY(0px) scale(1)' },
+					'50%': { transform: 'translateY(-20px) scale(1.05)' }
+				},
+				'glitch-bg': {
+					'0%, 90%, 100%': { opacity: '0' },
+					'91%': { opacity: '0.03', transform: 'translate(-4px, 2px) skew(-1deg)' },
+					'93%': { opacity: '0.06', transform: 'translate(4px, -2px) skew(1deg)' },
+					'95%': { opacity: '0.03', transform: 'translate(-2px, 0) skew(0deg)' },
+					'97%': { opacity: '0.05', transform: 'translate(2px, 1px) skew(-0.5deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float-circle': 'float-circle 6s ease-in-out infinite',
+				'glitch-bg': 'glitch-bg 5s infinite'
 			}
 		}
 	},
